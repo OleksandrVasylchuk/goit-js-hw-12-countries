@@ -4,10 +4,9 @@ import '@pnotify/core/dist/BrightTheme.css';
 
 const alerts = {
   alertStackOptions: new Stack({
-    dir1: 'dawn',
-    dir2: 'right',
-    firstpos1: 0,
-    firstpos2: 10,
+    dir1: 'down',
+    firstpos1: 225,
+    firstpos2: 15,
     maxStrategy: 'close',
     maxClosureCausesWait: false,
     sticker: false,
@@ -17,7 +16,7 @@ const alerts = {
     closer: false,
     delay: 3000,
   },
-  errorTooManyResults() {
+  errorManyResults() {
     error({
       title: 'Too many matches found.',
       text: 'Please enter a more specific query!',
