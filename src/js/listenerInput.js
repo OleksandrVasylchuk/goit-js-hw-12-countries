@@ -1,3 +1,17 @@
+import refs from './refs'
+import debounce from 'lodash.debounce';
+import responseHandlerInput from './responseHandler'
+
+
+
+refs.input.addEventListener(
+  'input',
+  debounce(e => {
+    responseHandlerInput(e.target.value);
+  }, 500),
+)
+
+
 // import axios from 'axios';
 
 // // axios.defaults.baseURL = 'https://restcountries.eu/rest/v2';
