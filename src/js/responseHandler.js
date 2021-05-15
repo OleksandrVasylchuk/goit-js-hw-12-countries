@@ -1,12 +1,8 @@
 import contryCard from '../templeates/contryCard.hbs';
 import counryList from '../templeates/country-list.hbs';
-import fetchCountries from './fetchCountries.js'
+import fetchCountries from './fetchCountries.js';
 import refs from './refs.js';
 import alerts from './alert.js';
-
-
-
-
 
 function responseHandlerInput(input) {
   fetchCountries(input).then(array => {
@@ -15,13 +11,9 @@ function responseHandlerInput(input) {
     } else if (array.length > 10) {
       alerts.errorManyResults();
     } else if (array.length === 1) {
-      refs.div.innerHTML = '';
-      const countriesTemplate = contryCard(array);
-      refs.div.innerHTML = countriesTemplate;
+      refs.div.innerHTML = contryCard(array);
     } else {
-      refs.div.innerHTML = '';
-      const countriesTemplateList = counryList(array);
-      refs.div.innerHTML = countriesTemplateList;
+      refs.div.innerHTML = counryList(array);
     }
   });
 }
