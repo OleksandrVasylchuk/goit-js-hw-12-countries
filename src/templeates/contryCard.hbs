@@ -1,12 +1,12 @@
 {{#each this}}
 <div class="form-group__name">
     <h1 class="name">{{name}}</h1>
-    <p class="capital">capital: {{capital}}</p>
-    <p class="populetion">populetion: {{population}}</p>
-    <p class="lenguages">languages: </p>
+    <p class="capital"><span class="span"> capital:</span> {{capital}}</p>
+    <p class="populetion"><span class="span">populetion:</span> {{population}}</p>
+    <p class="lenguages"><span class="span">languages:</span> </p>
     <ul>{{#each languages}}<li class="lenguages__item">{{name}}</li>{{/each}}</ul>
 </div>
 <div class="country-flag">
-    <img class="flag" src="{{flag}}" alt="flag of {{name}}">
+    <img class="flag" width="550" src="{{flag}}" alt="flag of {{name}}">
 </div>
 {{/each}}

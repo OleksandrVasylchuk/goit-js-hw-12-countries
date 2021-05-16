@@ -5,7 +5,7 @@ import '@pnotify/core/dist/BrightTheme.css';
 const alerts = {
   alertStackOptions: new Stack({
     dir1: 'down',
-    firstpos1: 225,
+    firstpos1: 200,
     firstpos2: 15,
     maxStrategy: 'close',
     maxClosureCausesWait: false,
@@ -14,7 +14,7 @@ const alerts = {
   alertOptions: {
     sticker: false,
     closer: false,
-    delay: 3000,
+    delay: 2000,
   },
   errorManyResults() {
     error({
